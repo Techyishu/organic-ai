@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debate Bot Web App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Debate Bot</h1>
+            <p>Select a topic or create your own to start debating!</p>
+        </header>
+
+        <main>
+            <section class="topic-selection">
+                <h2>Popular Topics</h2>
+                <div class="topic-grid" id="topicGrid">
+                    <!-- Topics will be loaded here -->
+                </div>
+
+                <div class="custom-topic">
+                    <h2>Custom Topic</h2>
+                    <input type="text" id="customTopic" placeholder="Enter your topic">
+                    <button onclick="startDebate()">Start Debate</button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html> 
